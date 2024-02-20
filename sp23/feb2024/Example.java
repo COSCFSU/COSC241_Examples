@@ -72,4 +72,19 @@ public class Example {
 		}
 		return -1; // we went through the hole list, its not there
 	}
+	
+	/**
+	 * Returns the largest element
+	 * @param list
+	 * @return
+	 */
+	public long getLargestFrom(long[] list) {
+		long largest = list[0];
+		for (int i=1; i<list.length; i++) {
+			if (list[i] > largest) {
+				largest = list[i];
+			}
+		}
+		return largest;
+	}
 }
