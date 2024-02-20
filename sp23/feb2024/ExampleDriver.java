@@ -7,7 +7,15 @@ public class ExampleDriver {
 		
 //		System.out.println(feb20);
 		feb20.runArrayExample1();
-		feb20.countByX(10, 5);
+		long[] nums = feb20.countByX(10, 2);
+		long[] nums2 = feb20.reverse(nums);
+		
+		long[] ex1 = {2,4,6,8};
+		ex1 = feb20.reverse(ex1);
+		
+		int target = 11;
+		int idx = feb20.seqSearch(nums2, target);
+		System.out.println(target +":" + idx);
 	}
 
 }

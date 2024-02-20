@@ -48,6 +48,28 @@ public class Example {
 	 * @return
 	 */
 	public long[] reverse(long[] list) {
+		// start with a new empty list
+		long[] revList = new long[list.length];
 		
+		for (int i = list.length-1, j=0; i >= 0; i-=1, j+=1) {
+			revList[j] = list[i];
+		}
+		
+		return revList;
+	}
+	
+	/**
+	 * Returns the index of the found item, or -1 if not found
+	 * @param list
+	 * @return
+	 */
+	public int seqSearch(long[] list, long target) {
+		for(int i=0; i<list.length; i++) {
+			if (target == list[i]) {
+//				System.out.println(target + " is at " + i);
+				return i;
+			}
+		}
+		return -1; // we went through the hole list, its not there
 	}
 }
