@@ -30,7 +30,13 @@ public class Driver {
 		ccit270.addStudent(s5);
 		ccit270.addStudent(s6);
 		
-		ccit270.printClassroom();
+//		ccit270.printClassroom();
+		
+		// now find
+		System.out.println("Finding student...");
+		String target = "Wario";
+		Student foundStudent = ccit270.findStudent(target);
+		System.out.println(foundStudent);
 	}
 	
 	public void runStudentBattle(String n1, String n2) {
