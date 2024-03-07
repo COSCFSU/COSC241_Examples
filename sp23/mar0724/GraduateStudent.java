@@ -1,6 +1,6 @@
 package mar0724;
 
-public class GraduateStudent extends Student {
+public class GraduateStudent extends Student implements Exerciser {
 
 	public GraduateStudent(String name) {
 		super(name);
@@ -20,5 +20,15 @@ public class GraduateStudent extends Student {
 	public void doSomething(String thing) {
 		doSomething();
 		System.out.println(" and then " + thing);
+	}
+
+	@Override
+	public void run() {
+		System.out.println(" This grad student runs!");
+	}
+
+	@Override
+	public void workOut() {
+		System.out.println(name + " works out");
 	}
 }

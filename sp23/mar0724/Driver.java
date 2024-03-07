@@ -8,6 +8,9 @@ public class Driver {
 		mar7.runHumanExample();
 	}
 
+	/**
+	 * Examples for inheritance, abstraction, polymorphism
+	 */
 	private void runHumanExample() {
 //		Human guy = new Human();  <- doesn't work
 		
@@ -31,6 +34,23 @@ public class Driver {
 		GraduateStudent gradGuy = (GraduateStudent) guy;
 		gradGuy.teachLab();
 		gradGuy.doSomething("goes to a party");
+		
+		
+		// interface examples
+		gradStu1.run();
+		gradStu1.workOut();
+		
+		Mailperson mailgal = (Mailperson) gal;
+		mailgal.run();
+		mailgal.workOut();
+		
+		Exerciser person1 = new Mailperson("Gavin");
+		Tiger ti = new Tiger();
+		person1.workOut();
+		person1 = (Exerciser) gal;
+		person1.workOut();
+		person1 = ti;
+		person1.run();
 	}
 
 }
