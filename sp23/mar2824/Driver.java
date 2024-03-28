@@ -21,11 +21,11 @@ public class Driver {
 		long msBefore = System.nanoTime();
 		System.out.println(f);
 		long msAfter = System.nanoTime();
-		System.out.println("took " + (msAfter - msBefore) + "ms");
+		System.out.println("took " + (msAfter - msBefore) + "ns");
 		msBefore = System.nanoTime();
 		System.out.println(f);
 		msAfter = System.nanoTime();
-		System.out.println("took " + (msAfter - msBefore) + "ms");
+		System.out.println("took " + (msAfter - msBefore) + "ns");
 
 		
 //		String word = "hello";
