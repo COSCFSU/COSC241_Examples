@@ -45,4 +45,23 @@ public class AlgorithmHelper {
 		
 		return list;
 	}
+	
+	public int[] getBoardList() {
+		return new int[]{9, 1, 8, 2, 7, 3};
+	}
+	
+	public int[] copyArray(int[] list) {
+		int[] copy = new int[list.length];
+		for (int i=0; i<list.length; i++) {
+			copy[i] = list[i];
+		}
+		return copy;
+	}
+	
+	public void printArray(int[] list) {
+		for (int i=0; i<list.length-1; i++) {
+			System.out.print(list[i] + ", ");
+		}
+		System.out.println(list[list.length-1]);
+	}
 }

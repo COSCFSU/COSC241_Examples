@@ -17,4 +17,20 @@ public class Sort {
 			list[j+1] = key;
 		}
 	}
+	
+	public void selection(int[] list) {
+		for(int i=0; i<list.length; i++) { // go through array
+			int ismall = i; // index of smallest
+			for(int j=i; j<list.length; j++) { // find the smallest from the unsorted part
+				// find smallest
+				if (list[j] < list[ismall]) {
+					ismall = j;
+				} // ismall now points to the smallest element
+			}
+			// swap to end of sorted part
+			int tmp = list[i];
+			list[i] = list[ismall];
+			list[ismall] = tmp;
+		}
+	}
 }
