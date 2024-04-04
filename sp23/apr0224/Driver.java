@@ -8,7 +8,8 @@ public class Driver {
 //		apr2.runExample1();
 //		apr2.runExample2();
 //		apr2.runExample3();
-		apr2.runExample4(); // compare sorts
+//		apr2.runExample4(); // compare sorts
+		apr2.runExample5();
 	}
 	
 	public void runExample1() {
@@ -68,6 +69,20 @@ public class Driver {
 		helper.endTimer();
 		helper.printArray(two);
 		System.out.printf("Selection took %,dns%n", helper.getTimeNano());
+	}
+	
+	public void runExample5() {
+		AlgorithmHelper helper = new AlgorithmHelper();
+		Sort sort = new Sort();
+		int[] list = helper.getArrayRando(10);
+		
+		helper.printArray(list);
+		helper.startTimer();
+//		sort.quicksort(list);
+		sort.quicksort(list, 0, list.length-1);
+		helper.endTimer();
+		helper.printArray(list);
+		System.out.printf("Quicksort took %,dns%n", helper.getTimeNano());
 	}
 	
 }
