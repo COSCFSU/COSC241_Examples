@@ -5,7 +5,31 @@ public class Driver {
 	public static void main(String[] args) {
 		Driver apr11 = new Driver();
 		
-		apr11.runStackExample1();
+//		apr11.runStackExample1();
+		apr11.runQueueExample1();
+	}
+
+	private void runQueueExample1() {
+		Queue q = new Queue();
+		int[] examples = new int[] {1,2,3,4,5};
+		
+		for (int i=0; i<examples.length; i++) {
+			q.enq(examples[i]);
+		}
+		
+		System.out.println(q);
+		
+		for (int i=0; i<3; i++) {
+			int first = q.deq();
+			System.out.println("Dequeued " + first);
+		}
+		System.out.println(q);
+		
+		examples = new int[] {10, 11, 12, 13};
+		for (int i=0; i<examples.length; i++) {
+			q.enq(examples[i]);
+		}
+		System.out.println(q);
 	}
 
 	private void runStackExample1() {

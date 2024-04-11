@@ -1,7 +1,7 @@
 package apr1124;
 
 /**
- * Class implementation of a Stack.
+ * Class implementation of a Stack.  (This implementation is an array-based stack).
  * 	!Pro tip: Know this inside and out.
  */
 public class Stack {
@@ -33,9 +33,9 @@ public class Stack {
 	 * @param e the element
 	 */
 	public void push(String e) { // e stands for "element"
-		if (count >= data.length) {
-			System.err.println("Whoopsie!");
-			throw new ArrayIndexOutOfBoundsException();
+		if (count >= data.length) {			// 1
+			System.err.println("Whoopsie!"); // 1
+			throw new ArrayIndexOutOfBoundsException(); //1
 		}
 		data[count++] = e;  //count = count + 1;
 	}
