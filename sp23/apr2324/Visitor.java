@@ -1,5 +1,8 @@
 package apr2324;
 
+/**
+ * Iterator implementation
+ */
 import apr1624.Vector;
 
 /**
@@ -14,6 +17,13 @@ public class Visitor {
 	public Visitor(Vector vec) {
 		this.vec = vec;
 		position = 0;
+	}
+	
+	public boolean hasNext() {
+		if (position >= (vec.getCount() -1)) {
+			return false;
+		}
+		return true;
 	}
 	
 	// next
