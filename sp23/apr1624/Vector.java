@@ -10,8 +10,8 @@ public class Vector {
 	public static final int DEFAULT_SIZE = 10;
 
 	/* Field members */
-	private int[] data;
-	private int count;
+	protected int[] data;
+	protected int count;
 
 	public Vector() {
 		this(DEFAULT_SIZE);
@@ -99,6 +99,17 @@ public class Vector {
 	// remfirst
 	// remove
 	// get
+	/**
+	 * Return element at this index.
+	 * @param idx
+	 */
+	public int get(int idx) {
+		if (idx < count && idx >= 0) {
+			return data[idx];
+		}
+		return -1;
+	}
+	
 	// clear
 
 	/* helper methods --------------------- */
