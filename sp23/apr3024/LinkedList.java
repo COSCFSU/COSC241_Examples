@@ -162,8 +162,8 @@ public class LinkedList {
 		}
 		
 		
-		printList();
-		q.printList();
+//		printList();
+//		q.printList();
 	}
 
 }
