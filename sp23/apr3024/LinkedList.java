@@ -2,6 +2,8 @@ package apr3024;
 
 import java.util.NoSuchElementException;
 
+import may0224.RandomMadeUpException;
+
 public class LinkedList {
 	private LLNode head;
 	private LLNode tail;
@@ -100,7 +102,30 @@ public class LinkedList {
 		}
 	}
 	
-	// remove(i)
+	/**
+	 * Remove the ith element and return it.
+	 * @param i index
+	 * @return element i, if it exists
+	 */
+	public int remove(int i) {
+		if (count <= 0 || i < 0 || i >= count) {
+			throw new RandomMadeUpException();
+		} else if (i == 0) {
+			return removeFirst();
+		} else {
+			LLNode left = head;
+			LLNode nd;
+			for (int j=0; j<i-1; j++) {
+				// iterate i up at the end
+				left = left.getNext();
+			}
+//			System.out.println("?:"+left.getData());
+			nd = left.getNext();
+			left.setNext(nd.getNext());
+		
+			return nd.getData();
+		}
+	}
 	
 	/**
 	 * Prints the list out
