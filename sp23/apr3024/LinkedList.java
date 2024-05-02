@@ -138,5 +138,32 @@ public class LinkedList {
 		}
 		System.out.println();
 	}
+	
+	public void putEvenNumbersAtTheEnd() {
+		LinkedList q = new LinkedList();
+		// while loop to find evens
+		LLNode left = head;
+		while(left.getNext() != null) {
+			LLNode nd = left.getNext();
+			if(nd.getData() % 2 == 0) { // is it even
+				q.addLast(nd.getData());
+				left.setNext(nd.getNext());
+			}
+			
+			left = left.getNext();
+		}
+		
+		// now put the q elements back into this list
+		left = q.head;
+		while(left != null) {
+//			System.out.println(left.getData());
+			addLast(q.removeFirst());
+			left = left.getNext();
+		}
+		
+		
+		printList();
+		q.printList();
+	}
 
 }
